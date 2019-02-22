@@ -10555,7 +10555,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! pace 0.5.3 */
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mamy/heroku/angular/hita/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mamy/heroku/angular/hita-js/src/main.ts */"./src/main.ts");
 
 
 /***/ })

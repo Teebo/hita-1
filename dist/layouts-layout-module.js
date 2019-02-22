@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\n<app-intro></app-intro>\n<app-portfolio></app-portfolio>\n<app-services></app-services>\n<app-testimonials-carousel></app-testimonials-carousel>\n<app-pricings></app-pricings>\n<app-contact></app-contact>\n<app-cta></app-cta>\n<app-footer></app-footer>"
+module.exports = "<!-- <app-header></app-header> -->\n<app-intro></app-intro>\n<!-- <app-portfolio></app-portfolio> -->\n<!-- <app-services></app-services>\n<app-testimonials-carousel></app-testimonials-carousel>\n<app-pricings></app-pricings>\n<app-contact></app-contact>\n<app-cta></app-cta>\n<app-footer></app-footer> -->"
 
 /***/ }),
 
