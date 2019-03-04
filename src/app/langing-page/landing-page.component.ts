@@ -3,14 +3,11 @@ import { LandingFixService } from '../shared/services/landing-fix.service';
 
 @Component({
   selector: 'app-demo',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.scss']
 })
-export class DemoComponent implements OnInit, OnDestroy {
-
-  constructor(
-    private fix: LandingFixService
-  ) { }
+export class LandingPageComponent implements OnInit, OnDestroy {
+  constructor(private fix: LandingFixService) {}
 
   ngOnInit() {
     this.fix.addFix();
@@ -18,5 +15,4 @@ export class DemoComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.fix.removeFix();
   }
-
 }

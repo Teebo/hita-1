@@ -1,22 +1,16 @@
 import { Routes } from '@angular/router';
+import { LandingPageComponent } from './langing-page/landing-page.component';
+import { SignInComponent } from './signin/signin.component';
 
 export const rootRouterConfig: Routes = [
-  { 
-    path: '', 
-    redirectTo: 'demos', 
-    pathMatch: 'full' 
+  {
+    path: '',
+    component: LandingPageComponent
   },
-  { 
-    path: 'demos', 
-    loadChildren: './main/main.module#DemoModule'
-  },
-  { 
-    path: 'layout', 
-    loadChildren: './layouts/layout.module#LayoutModule'
-  },
-  { 
-    path: '**', 
-    redirectTo: 'layout/one'
+  {
+    path: 'sign-in',
+    component: SignInComponent
   }
+
 ];
 
