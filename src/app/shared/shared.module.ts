@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { 
+import {
   MatSidenavModule,
   MatListModule,
   MatTooltipModule,
@@ -22,14 +22,13 @@ import {
   MatRippleModule,
   MatDialogModule
 } from '@angular/material';
-
+import { UIHelperService } from '../langing-page/ui-helper.service';
 
 import { AppLoaderComponent } from './services/app-loader/app-loader.component';
 
 // DIRECTIVES
 import { FontSizeDirective } from './directives/font-size.directive';
 import { ScrollToDirective } from './directives/scroll-to.directive';
-
 
 // SERVICES
 import { AuthGuard } from './services/auth/auth.guard';
@@ -40,7 +39,7 @@ const classesToInclude = [
   AppLoaderComponent,
   FontSizeDirective,
   ScrollToDirective
-]
+];
 
 @NgModule({
   imports: [
@@ -48,22 +47,14 @@ const classesToInclude = [
     FormsModule,
     RouterModule,
     FlexLayoutModule,
-    MatMenuModule,
-    MatSnackBarModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule,
     MatProgressSpinnerModule,
-    MatRippleModule,
-    MatDialogModule
+    MatRippleModule
   ],
   entryComponents: [AppLoaderComponent],
-  providers: [
-    AuthGuard,
-    AppLoaderService,
-    LandingFixService
-  ],
+  providers: [AuthGuard, AppLoaderService, LandingFixService, UIHelperService],
   declarations: classesToInclude,
   exports: classesToInclude
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -25,9 +25,13 @@
 //   }
 // }
 
+#insight-section {
+  color: #fff;
+  background-color: #6c63ff;
+}
+
 .home-intro-section {
   padding: 180px 0;
-  color: #ffffff;
   overflow: hidden
 }
 .home-intro-title {
@@ -48,7 +52,6 @@
 }
 .intro-product {
   position: relative;
-  top: 100px;
   left: 20px;
 }
 .intro-product-link {

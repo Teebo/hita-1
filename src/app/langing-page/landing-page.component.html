@@ -20,64 +20,111 @@
     </div>
 </section> -->
 
-<section id="intro-one-section" class="home-intro-section primary-bg">
-    <div class="container" fxLayout="row wrap">
-        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
-            <h1 class="home-intro-title">Welcome to hita!</h1>
-            <div class="home-intro-desc">
-                Delivering powerful and reliable Web App solutions
-            </div>
-            <!-- <div fxLayout="row" fxLayout.lt-sm="column">
+<section id="intro-one-section" class="home-intro-section">
+  <div class="container" fxLayout="row wrap">
+    <div
+      fxFlex.xs="100"
+      [ngStyle]="{ 'text-align': 'center' }"
+      fxFlex.sm="100"
+      fxFlex.md="50"
+      fxFlex.lg="50"
+      fxFlex.xl="50"
+    >
+      <h1 class="home-intro-title">Welcome to hita!</h1>
+      <div class="home-intro-desc">
+        Delivering powerful and reliable Web App solutions
+      </div>
+      <!-- <div fxLayout="row" fxLayout.lt-sm="column">
                 <button mat-raised-button mat-lg-button id="frontend-btn" (click)="getNGLanding()"><mat-icon>get_app</mat-icon> Buy Now</button>
             </div> -->
-        </div>
-        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
-            <div class="intro-product">
-                <img mat-card-image src="assets/images/main.png" [style.margin]="'0 !important'">
-            </div>
-        </div>
     </div>
+    <div
+      fxFlex.xs="100"
+      fxFlex.sm="100"
+      fxFlex.md="50"
+      fxFlex.lg="50"
+      fxFlex.xl="50"
+    >
+      <div class="intro-product">
+        <img
+          mat-card-image
+          src="assets/images/landing-img.svg"
+          [style.margin]="'0 !important'"
+        />
+      </div>
+    </div>
+  </div>
 </section>
-<section id="feature-section"  class="gap">
-    <div class="container">
-        <div fxLayout='column' class="text-center mb-5">
-            <div fxFlex.gt-md="60%">
-                <h2 class="title-page">Following Industry Standard </h2>
-                <p class="lead w-60">Gain experience from serving International customer </p>
-            </div>
-        </div>
-        <div fxLayout="row" fxLayoutWrap="wrap" class="text-center featured-section">
-            <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
-                <i class="material-icons">code</i>
-                <h4 class="mb-2">Optimize Code</h4>
-                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit.</p> -->
-            </div>
-            <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
-                <i class="material-icons">
-mobile_friendly
-</i>
-                <h4 class="mb-2">Mobile Friendly</h4>
-                <!-- <p>At vero eos et accusamus et iusto odio dignissimos.</p> -->
-            </div>
-            <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
-                <i class="material-icons">
-system_update
-</i>
-                <h4 class="mb-2">Scalable</h4>
-                <!-- <p>Nam libero tempore, cum soluta nobis est.</p> -->
-            </div>
-            <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
-                <i class="material-icons">
-contact_support
-</i>
-                <h4 class="mb-2">Support</h4>
-                <!-- <p> Temporibus autem quibusdam et aut officiis debitis aut rerum.</p> -->
-            </div>
-        </div>
-        <!-- <div class="row align-center">
+<section id="insight-section" class="gap">
+  <div class="container">
+    <div fxLayout="column" class="text-center mb-5">
+      <div fxFlex.gt-md="60%">
+        <h2 class="title-page">Our insight</h2>
+        <p class="lead w-60">We are leading in the Advertising agency</p>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutWrap="wrap" class="text-center">
+      <div fxFlex="50" fxLayout="column">
+        <p fxFlex="50">Stats</p>
+        <h1 [ngStyle]="{'font-size': '60px',
+            'font-weight': 'lighter'}" fxFlex="50" [countUp]="myEndVal" [options]="{ duration: 700 }">
+          0
+        </h1>
+      </div>
+      <div fxFlex="50" fxLayout="column">
+        <p fxFlex="50">Live tweets</p>
+        <h1 [ngStyle]="{'font-size': '60px',
+        'font-weight': 'lighter'}"  class="number-count" fxFlex="50">{{tweets.length}}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="feature-section" class="gap">
+  <div class="container">
+    <div fxLayout="column" class="text-center mb-5">
+      <div fxFlex.gt-md="60%">
+        <h2 class="title-page">Following Industry Standard</h2>
+        <p class="lead w-60">
+          Gain experience from serving International customer
+        </p>
+      </div>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayoutWrap="wrap"
+      class="text-center featured-section"
+    >
+      <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
+        <i class="material-icons">code</i>
+        <h4 class="mb-2">Optimize Code</h4>
+        <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit.</p> -->
+      </div>
+      <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
+        <i class="material-icons">
+          mobile_friendly
+        </i>
+        <h4 class="mb-2">Mobile Friendly</h4>
+        <!-- <p>At vero eos et accusamus et iusto odio dignissimos.</p> -->
+      </div>
+      <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
+        <i class="material-icons">
+          system_update
+        </i>
+        <h4 class="mb-2">Scalable</h4>
+        <!-- <p>Nam libero tempore, cum soluta nobis est.</p> -->
+      </div>
+      <div fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50" class="feature-item">
+        <i class="material-icons">
+          contact_support
+        </i>
+        <h4 class="mb-2">Support</h4>
+        <!-- <p> Temporibus autem quibusdam et aut officiis debitis aut rerum.</p> -->
+      </div>
+    </div>
+    <!-- <div class="row align-center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 more_info_anim6 animated fadeInUp">
                 <img src="assets/images/product.png" alt="">
             </div>
         </div> -->
-    </div>
+  </div>
 </section>

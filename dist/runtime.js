@@ -61,7 +61,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"layouts-layout-module~main-main-module":"layouts-layout-module~main-main-module","layouts-layout-module":"layouts-layout-module","main-main-module":"main-main-module"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "" + ({"layouts-admin-layout-admin-layout-module":"layouts-admin-layout-admin-layout-module"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function

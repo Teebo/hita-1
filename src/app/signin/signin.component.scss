@@ -1,0 +1,20 @@
+
+
+.form-btn {
+  color: #6c63ff;
+  margin: 1%;
+}
+
+.form-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+@media(max-width: 767px) {
+  .form-btn-wrapper {
+    left: 5% !important;
+  }
+}

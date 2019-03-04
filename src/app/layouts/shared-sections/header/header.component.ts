@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, HostBinding, Inject, Input } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW_PROVIDERS, WINDOW } from '../../../shared/helpers/window.helper';
+import { UIHelperService } from '../../../langing-page/ui-helper.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   isFixed;
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window
+    @Inject(WINDOW) private window: Window,
+    private uiHelperService: UIHelperService
   ) { }
 
   ngOnInit() {
@@ -34,6 +36,10 @@ export class HeaderComponent implements OnInit {
 
   buyAngland() {
     this.window.open('');
+  }
+
+  setCountStart(): void {
+    this.uiHelperService.setCanStartCountUpValue(true);
   }
 
 }

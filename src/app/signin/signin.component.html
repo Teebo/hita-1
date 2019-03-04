@@ -1,18 +1,31 @@
-<h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
-
-<div *ngIf="!(authService.user | async)">
-  <input type="email" [(ngModel)]="email" placeholder="email">
-  <input type="password" [(ngModel)]="password" placeholder="email">
-
-  <button (click)="signup()" [disabled]="!email || !password">
-    Signup
-  </button>
-
-  <button (click)="login()" [disabled]="!email || !password">
-    Login
-  </button>
-</div>
-
-<button (click)="logout()" *ngIf="authService.user | async">
-  Logout
-</button>
+<section id="contact-section" class="gap bg-grey">
+    <div class="container">
+        <div fxLayout='column' class="text-center mb-5">
+            <div fxFlex.gt-md="60%">
+                <h2>Sign in / Sign up</h2>
+            </div>
+        </div>
+        <form>
+            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center" fxLayoutWrap="wrap">
+                <div fxFlex="50">
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <input type="email" [(ngModel)]="email"  matInput name="email"  placeholder="Email*">
+                        </mat-form-field>
+                    </div>
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <input type="password" [(ngModel)]="password" matInput name="password" placeholder="Password*">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row" fxFlex="100">
+                    <div class="form-btn-wrapper">
+                        <button (click)="signup()" [disabled]="!email || !password" class="form-btn" mat-raised-button mat-lg-button>Sign up</button>
+                        <button (click)="login()" [disabled]="!email || !password" class="form-btn" mat-raised-button mat-lg-button>Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
