@@ -39,7 +39,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ComponentsModule } from './components/components.module';
 
 const config: SocketIoConfig = {
-  url: 'https://hita-app.herokuapp.com',
+  url: 'https://hitadata.com',
   options: {}
 };
 
