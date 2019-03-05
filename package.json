@@ -1,9 +1,9 @@
 {
-  "name": "ng-landing",
-  "version": "6.0.0",
-  "license": "https://themeforest.net/licenses/terms/regular",
+  "name": "hita!",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
   "author": {
-    "name": "trendsetterthemes"
+    "name": "hita! Team"
   },
   "scripts": {
     "ng": "ng",
