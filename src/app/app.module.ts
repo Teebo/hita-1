@@ -37,6 +37,7 @@ import { CountUpModule } from 'countup.js-angular2';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ComponentsModule } from './components/components.module';
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 const config: SocketIoConfig = {
   url: 'http://hitadata.com',
@@ -63,7 +64,8 @@ const config: SocketIoConfig = {
     FlexLayoutModule,
     CountUpModule,
     MatTooltipModule,
-    SocketIoModule.forRoot(config)
+    SocketIoModule.forRoot(config),
+    ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,

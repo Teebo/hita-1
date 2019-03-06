@@ -13,8 +13,10 @@ export class HeaderComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window: Window,
-    private uiHelperService: UIHelperService
-  ) { }
+    public uiHelperService: UIHelperService
+  ) {
+
+  }
 
   ngOnInit() {
   }

@@ -3,6 +3,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
+import { AppLoaderService } from '../app-loader/app-loader.service';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Injectable()
 export class AuthService {
@@ -10,32 +12,39 @@ export class AuthService {
 
   constructor(
     private firebaseAuth: AngularFireAuth,
-    private router: Router
+    private router: Router,
+    private appLoaderService: AppLoaderService,
+    public toastr: ToastrManager
     ) {
     this.user = firebaseAuth.authState;
   }
 
   signup(email: string, password: string) {
+    this.appLoaderService.open();
     this.firebaseAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Success!', value);
+        this.appLoaderService.close();
+        this.toastr.successToastr('Account was created', 'Success');
         this.router.navigate(['dashboard']);
       })
       .catch(err => {
-        console.log('Something went wrong:', err.message);
+        this.appLoaderService.close();
+        this.toastr.errorToastr(err.message, 'Error');
       });
   }
 
   login(email: string, password: string) {
+    this.appLoaderService.open();
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Nice, it worked!');
+        this.appLoaderService.close();
         this.router.navigate(['dashboard']);
       })
       .catch(err => {
-        console.log('Something went wrong:', err.message);
+        this.appLoaderService.close();
+        this.toastr.errorToastr(err.message, 'Error');
       });
   }
 

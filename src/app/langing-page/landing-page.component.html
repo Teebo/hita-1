@@ -55,30 +55,6 @@
     </div>
   </div>
 </section>
-<section id="insight-section" class="gap">
-  <div class="container">
-    <div fxLayout="column" class="text-center mb-5">
-      <div fxFlex.gt-md="60%">
-        <h2 class="title-page">Our insight</h2>
-        <p class="lead w-60">We are leading in the Advertising agency</p>
-      </div>
-    </div>
-    <div fxLayout="row" fxLayoutWrap="wrap" class="text-center">
-      <div fxFlex="50" fxLayout="column">
-        <p fxFlex="50">Stats</p>
-        <h1 [ngStyle]="{'font-size': '60px',
-            'font-weight': 'lighter'}" fxFlex="50" [countUp]="myEndVal" [options]="{ duration: 700 }">
-          0
-        </h1>
-      </div>
-      <div fxFlex="50" fxLayout="column">
-        <p fxFlex="50">Live tweets</p>
-        <h1 [ngStyle]="{'font-size': '60px',
-        'font-weight': 'lighter'}"  class="number-count" fxFlex="50">{{tweets.length}}</h1>
-      </div>
-    </div>
-  </div>
-</section>
 <section id="feature-section" class="gap">
   <div class="container">
     <div fxLayout="column" class="text-center mb-5">
@@ -126,5 +102,34 @@
                 <img src="assets/images/product.png" alt="">
             </div>
         </div> -->
+  </div>
+</section>
+<section id="insight-section" class="gap">
+  <div class="container">
+    <div fxLayout="column" class="text-center mb-5">
+      <div fxFlex.gt-md="60%">
+        <h2 class="title-page">Our insight</h2>
+        <p class="lead w-60">We are leading in the Advertising agency</p>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutWrap="wrap" class="text-center">
+      <div fxFlex="50" fxLayout="column">
+        <p fxFlex="50">Stats</p>
+        <h1 [ngStyle]="{'font-size': '60px',
+            'font-weight': 'lighter'}" fxFlex="50" [countUp]="myEndVal" [options]="{ duration: 700 }">
+          0
+        </h1>
+      </div>
+      <div fxFlex="50" fxLayout="column">
+        <p fxFlex="50">Live tweets</p>
+        <h1 [ngStyle]="{'font-size': '60px',
+        'font-weight': 'lighter'}"  class="number-count" fxFlex="50">{{tweets.length}}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="advert-section" class="gap">
+  <div class="container">
+      TODO
   </div>
 </section>

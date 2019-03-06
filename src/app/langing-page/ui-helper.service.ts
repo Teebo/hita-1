@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 export class UIHelperService {
   canStartCountUpValue = new BehaviorSubject(false);
   canStartCountUpValue$ = this.canStartCountUpValue.asObservable();
+  navHaveItems = new BehaviorSubject(false);
+  navHaveItems$ = this.navHaveItems.asObservable();
 
   setCanStartCountUpValue(canStartCountUpValue): void {
     this.canStartCountUpValue.next(canStartCountUpValue);
@@ -13,5 +15,13 @@ export class UIHelperService {
 
   getObservableCanStartCountUpValue(): Observable<boolean> {
     return this.canStartCountUpValue$;
+  }
+
+  setNavHaveItems(navHaveItems): void {
+    this.navHaveItems.next(navHaveItems);
+  }
+
+  getNavHaveItems(): Observable<boolean> {
+    return this.navHaveItems$;
   }
 }

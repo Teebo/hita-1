@@ -10,7 +10,10 @@ export class SignInComponent {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService, private router: Router) { }
+  constructor(
+    public authService: AuthService,
+    private router: Router
+  ) { }
 
   signup() {
     this.authService.signup(this.email, this.password);

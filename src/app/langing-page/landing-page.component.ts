@@ -19,16 +19,16 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.socket.on('connect', () => {
-      console.log('Connected');
-      this.socket.emit('getTweets');
-    });
+    // this.socket.on('connect', () => {
+    //   console.log('Connected');
+    //   this.socket.emit('getTweets');
+    // });
 
-    this.socket.on('tweets', d => {
-      console.log(d);
-      this.tweets.push(d);
-      console.log(this.tweets);
-    });
+    // this.socket.on('tweets', d => {
+    //   console.log(d);
+    //   this.tweets.push(d);
+    //   console.log(this.tweets);
+    // });
 
     this.uiHelperService
       .getObservableCanStartCountUpValue()

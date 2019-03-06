@@ -50,7 +50,8 @@ const classesToInclude = [
     MatIconModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    MatRippleModule
+    MatRippleModule,
+    MatDialogModule,
   ],
   entryComponents: [AppLoaderComponent],
   providers: [AuthGuard, AppLoaderService, LandingFixService, UIHelperService],

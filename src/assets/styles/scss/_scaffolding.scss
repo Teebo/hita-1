@@ -778,25 +778,6 @@ body .mat-select-trigger {
 
 
 /*---- Loader ----*/
-
-.app-loader,
-.view-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-}
-
-.spinner {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    margin: auto;
-}
-
 .double-bounce1,
 .double-bounce2 {
     width: 100%;
