@@ -1,5 +1,5 @@
-<section id="contact-section" class="gap bg-grey">
-    <div class="container">
+<section id="login-section" class="gap bg-grey">
+    <div *ngIf="uiHelperService.getIsAuthenticationFormVisible() | async" class="container">
         <div fxLayout='column' class="text-center mb-5">
             <div fxFlex.gt-md="60%">
                 <h2>Sign in / Sign up</h2>

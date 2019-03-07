@@ -24,7 +24,7 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NguCarouselModule } from '@ngu/carousel';
-import { LandingPageComponent } from './langing-page/landing-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { WINDOW_PROVIDERS } from './shared/helpers/window.helper';
 import { HeaderComponent } from './layouts/shared-sections/header/header.component';
 import { FooterComponent } from './layouts/shared-sections/footer/footer.component';

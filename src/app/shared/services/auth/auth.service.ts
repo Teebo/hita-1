@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 import { AppLoaderService } from '../app-loader/app-loader.service';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { UIHelperService } from '../../../landing-page/ui-helper.service';
 
 @Injectable()
 export class AuthService {
@@ -14,12 +15,14 @@ export class AuthService {
     private firebaseAuth: AngularFireAuth,
     private router: Router,
     private appLoaderService: AppLoaderService,
-    public toastr: ToastrManager
+    public toastr: ToastrManager,
+    private uiHelperService: UIHelperService
     ) {
     this.user = firebaseAuth.authState;
   }
 
   signup(email: string, password: string) {
+    this.uiHelperService.setIsAuthenticationFormVisible(false);
     this.appLoaderService.open();
     this.firebaseAuth.auth
       .createUserWithEmailAndPassword(email, password)
@@ -30,11 +33,13 @@ export class AuthService {
       })
       .catch(err => {
         this.appLoaderService.close();
+        this.uiHelperService.setIsAuthenticationFormVisible(true);
         this.toastr.errorToastr(err.message, 'Error');
       });
   }
 
   login(email: string, password: string) {
+    this.uiHelperService.setIsAuthenticationFormVisible(false);
     this.appLoaderService.open();
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
@@ -44,6 +49,7 @@ export class AuthService {
       })
       .catch(err => {
         this.appLoaderService.close();
+        this.uiHelperService.setIsAuthenticationFormVisible(true);
         this.toastr.errorToastr(err.message, 'Error');
       });
   }

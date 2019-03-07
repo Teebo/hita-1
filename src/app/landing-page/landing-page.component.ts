@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LandingFixService } from '../shared/services/landing-fix.service';
-import { UIHelperService } from '../langing-page/ui-helper.service';
+import { UIHelperService } from '../landing-page/ui-helper.service';
 import { Socket } from 'ngx-socket-io';
 
 @Component({
@@ -19,16 +19,16 @@ export class LandingPageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // this.socket.on('connect', () => {
-    //   console.log('Connected');
-    //   this.socket.emit('getTweets');
-    // });
+    this.socket.on('connect', () => {
+      console.log('Connected');
+      this.socket.emit('getTweets');
+    });
 
-    // this.socket.on('tweets', d => {
-    //   console.log(d);
-    //   this.tweets.push(d);
-    //   console.log(this.tweets);
-    // });
+    this.socket.on('tweets', d => {
+      console.log(d);
+      this.tweets.push(d);
+      console.log(this.tweets);
+    });
 
     this.uiHelperService
       .getObservableCanStartCountUpValue()

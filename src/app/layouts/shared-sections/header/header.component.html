@@ -1,8 +1,8 @@
 <header id="main-header" [ngClass]="{'header-fixed': isFixed}">
     <div class="container" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
         <div class="header-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">       
-            <span><a class="logo" routerLink="/">hita</a></span>
-            <button mat-icon-button id="menu-toggle" (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
+            <span><a class="logo" routerLink="/" *ngIf="this.uiHelperService.getIsAuthenticationFormVisible() | async">hita</a></span>
+            <button *ngIf="this.uiHelperService.getNavHaveItems() | async" mat-icon-button id="menu-toggle" (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
         </div>
         <div fxFlex fxLayoutAlign="end" class="top-menu" *ngIf="this.uiHelperService.getNavHaveItems() | async">
             <button mat-button id="dashboard-topbtn" (click)="setCountStart()" class="hometop-btn" scrollTo="insight-section"><strong>Insight</strong></button>

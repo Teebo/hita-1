@@ -22,7 +22,7 @@ import {
   MatRippleModule,
   MatDialogModule
 } from '@angular/material';
-import { UIHelperService } from '../langing-page/ui-helper.service';
+import { UIHelperService } from '../landing-page/ui-helper.service';
 
 import { AppLoaderComponent } from './services/app-loader/app-loader.component';
 
