@@ -10,7 +10,6 @@
     "start": "node server.js",
     "serve": "ng serve",
     "serveProd": "ng serve --environment=prod",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
