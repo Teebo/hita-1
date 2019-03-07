@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, HostBinding, Inject, Input } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW_PROVIDERS, WINDOW } from '../../../shared/helpers/window.helper';
-import { UIHelperService } from '../../../langing-page/ui-helper.service';
+import { UIHelperService } from '../../../landing-page/ui-helper.service';
 
 @Component({
   selector: 'app-header',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { UIHelperService } from './langing-page/ui-helper.service';
+import { UIHelperService } from './landing-page/ui-helper.service';
 
 @Component({
   selector: 'app-root',

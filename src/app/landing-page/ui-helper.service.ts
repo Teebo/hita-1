@@ -8,6 +8,8 @@ export class UIHelperService {
   canStartCountUpValue$ = this.canStartCountUpValue.asObservable();
   navHaveItems = new BehaviorSubject(false);
   navHaveItems$ = this.navHaveItems.asObservable();
+  isAuthenticationFormVisible = new BehaviorSubject(true);
+  isAuthenticationFormVisible$ = this.isAuthenticationFormVisible.asObservable();
 
   setCanStartCountUpValue(canStartCountUpValue): void {
     this.canStartCountUpValue.next(canStartCountUpValue);
@@ -23,5 +25,13 @@ export class UIHelperService {
 
   getNavHaveItems(): Observable<boolean> {
     return this.navHaveItems$;
+  }
+
+  setIsAuthenticationFormVisible(isAuthenticationFormVisible): void {
+    this.isAuthenticationFormVisible.next(isAuthenticationFormVisible);
+  }
+
+  getIsAuthenticationFormVisible(): Observable<boolean> {
+    return this.isAuthenticationFormVisible$;
   }
 }
