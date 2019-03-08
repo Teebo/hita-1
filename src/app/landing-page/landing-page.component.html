@@ -121,7 +121,7 @@
           0
         </h1> -->
       </div>
-      <div fxFlex="50" fxLayout="column">
+      <div class="the-box" fxFlex="50" fxLayout="column">
         <p fxFlex="50">Live tweets</p>
         <h1 [ngStyle]="{'font-size': '60px',
         'font-weight': 'lighter'}"  class="number-count" fxFlex="50">{{tweets.length}}</h1>
@@ -129,8 +129,14 @@
     </div>
   </div>
 </section>
-<section id="advert-section" class="gap">
+<section id="animation-section" class="gap">
   <div class="container">
-      ...
+    <div fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="center" class="text-center">
+      <div fxFlex="100" fxLayout="row">
+        <div class="text-container heading1">
+          <h1>{{animatedText}}</h1>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
