@@ -29,7 +29,7 @@ export class AuthService {
       .then(value => {
         this.appLoaderService.close();
         this.toastr.successToastr('Account was created', 'Success');
-        this.router.navigate(['dashboard']);
+        window.location.href = 'https://hita-dashboard.herokuapp.com';
       })
       .catch(err => {
         this.appLoaderService.close();
@@ -45,7 +45,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(value => {
         this.appLoaderService.close();
-        this.router.navigate(['dashboard']);
+        window.location.href = 'https://hita-dashboard.herokuapp.com';
       })
       .catch(err => {
         this.appLoaderService.close();
