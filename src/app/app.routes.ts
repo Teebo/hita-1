@@ -14,7 +14,7 @@ export const rootRouterConfig: Routes = [
   },
   {
     path: 'dashboard',
-    redirectTo: 'https://hita-dashboard.herokuapp.com',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
